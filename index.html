@@ -24,9 +24,10 @@
     }
 
     body {
-      background: radial-gradient(circle at top, #1e293b 0, #020617 45%, #000 100%);
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
       color: var(--text-main);
       padding: 24px;
+      font-size: 18px; /* overall bigger */
     }
 
     .page {
@@ -40,14 +41,14 @@
     }
 
     header h1 {
-      font-size: 1.9rem;
+      font-size: 2.1rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
     header p {
       margin-top: 8px;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: var(--text-muted);
     }
 
@@ -55,29 +56,29 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--accent-main);
       background: rgba(249, 115, 22, 0.12);
       border-radius: 999px;
-      padding: 4px 10px;
+      padding: 4px 12px;
       margin-bottom: 10px;
     }
 
     .badge-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
       background: var(--accent-main);
     }
 
     /* Top role */
     .top-role {
-      max-width: 540px;
+      max-width: 620px;
       margin: 0 auto 32px auto;
-      padding: 16px;
-      border-radius: 18px;
+      padding: 18px;
+      border-radius: 20px;
       background: linear-gradient(135deg, #111827, #020617);
       border: 1px solid rgba(248, 250, 252, 0.09);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
@@ -86,39 +87,45 @@
     .top-role-header {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       margin-bottom: 10px;
     }
 
     .avatar {
-      width: 48px;
-      height: 48px;
+      width: 64px;
+      height: 64px;
       border-radius: 999px;
       background: radial-gradient(circle at 30% 10%, #facc15, #f97316 40%, #581c87 100%);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 1.3rem;
       color: #0b1120;
       overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .avatar:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
     }
 
     .role-title {
-      font-size: 0.95rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
       color: var(--accent-main);
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
     .person-name {
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1.2rem;
     }
 
     .role-description {
-      font-size: 0.85rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
       margin-top: 6px;
     }
@@ -137,84 +144,91 @@
     }
 
     .section {
-      border-radius: 18px;
+      border-radius: 20px;
       border: 1px solid rgba(148, 163, 184, 0.3);
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), transparent 60%);
-      padding: 14px;
+      padding: 16px;
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), #020617 70%);
     }
 
     .section--plus {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.08), transparent 60%);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), #020617 70%);
     }
 
     .section-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       gap: 8px;
     }
 
     .section-left {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .section-title {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     .section-tag {
-      font-size: 0.7rem;
-      padding: 2px 8px;
+      font-size: 0.8rem;
+      padding: 3px 10px;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
       color: var(--text-muted);
     }
 
     .section-logo {
-      width: 32px;
-      height: 32px;
+      width: 64px;  /* bigger than members */
+      height: 64px;
       object-fit: contain;
     }
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
     }
 
     .card {
-      border-radius: 14px;
+      border-radius: 16px;
       border: 1px solid var(--border-subtle);
       background: rgba(15, 23, 42, 0.9);
-      padding: 10px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
 
     .card-header {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
     .card-avatar {
-      width: 36px;
-      height: 36px;
+      width: 56px;
+      height: 56px;
       border-radius: 999px;
       background: radial-gradient(circle at 20% 0%, #22c55e, #0ea5e9 40%, #1d4ed8 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       font-weight: 700;
       overflow: hidden;
+      color: #0b1120;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card-avatar:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
     }
 
     .card-avatar img,
@@ -229,23 +243,23 @@
     .card-meta {
       display: flex;
       flex-direction: column;
-      gap: 1px;
+      gap: 2px;
     }
 
     .card-name {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
     }
 
     .card-role {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--text-muted);
     }
 
     .card-body {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
     }
 
@@ -253,16 +267,16 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.5);
-      padding: 2px 8px;
+      padding: 3px 10px;
       margin-top: 4px;
     }
 
     .pill-dot {
-      width: 6px;
-      height: 6px;
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
       background: #22c55e;
     }
@@ -277,8 +291,8 @@
       border: 1px solid rgba(148, 163, 184, 0.6);
       background: transparent;
       color: var(--text-main);
-      font-size: 0.7rem;
-      padding: 4px 8px;
+      font-size: 0.8rem;
+      padding: 5px 10px;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
@@ -286,7 +300,7 @@
     }
 
     .accordion-toggle span.icon {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       transform: translateY(1px);
     }
 
@@ -308,13 +322,13 @@
 
     .accordion-inner {
       padding: 8px 10px;
-      font-size: 0.78rem;
-      line-height: 1.45;
+      font-size: 0.85rem;
+      line-height: 1.5;
       color: var(--text-main);
     }
 
     .accordion-inner ul {
-      padding-left: 16px;
+      padding-left: 18px;
       margin-top: 4px;
     }
 
@@ -322,10 +336,20 @@
       margin-bottom: 3px;
     }
 
+    .manager-wrapper {
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    .manager-wrapper .card {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
     footer {
       margin-top: 40px;
       text-align: center;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
     }
   </style>
@@ -387,14 +411,17 @@
           </div>
           <div class="section-tag">Design Consultancy – BIM Unit</div>
         </div>
-        <div class="team-grid">
 
-          <!-- BIM Manager – Mimar A&E (vacant) -->
+        <!-- BIM Manager – Mimar A&E (top center) -->
+        <div class="manager-wrapper">
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">AE</div>
+              <div class="card-avatar">
+                <!-- no image: initial from name -->
+                T
+              </div>
               <div class="card-meta">
-                <div class="card-name">[To be assigned]</div>
+                <div class="card-name">To be assigned</div>
                 <div class="card-role">BIM Manager – Mimar A&amp;E</div>
               </div>
             </div>
@@ -421,6 +448,9 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <div class="team-grid">
 
           <!-- BIM Leads -->
           <article class="card">
@@ -580,10 +610,9 @@
               <div id="accordion-coord-abdelraof" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Produce, maintain and update discipline BIM models according to project requirements.</li>
-                    <li>Follow company standards, BEP, LOD requirements, naming conventions and approved templates.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
                     <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
-                    <li>Prepare views, drawings and schedules in line with project documentation standards.</li>
                     <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
                     <li>Ensure the accuracy and completeness of model information for each project stage.</li>
                     <li>Support Senior BIM Coordinators and BIM Leads with model updates and information checks.</li>
@@ -614,10 +643,9 @@
               <div id="accordion-coord-hoda" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Produce, maintain and update discipline BIM models according to project requirements.</li>
-                    <li>Follow company standards, BEP, LOD requirements, naming conventions and approved templates.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
                     <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
-                    <li>Prepare views, drawings and schedules in line with project documentation standards.</li>
                     <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
                     <li>Ensure the accuracy and completeness of model information for each project stage.</li>
                     <li>Support Senior BIM Coordinators and BIM Leads with model updates and information checks.</li>
@@ -648,10 +676,9 @@
               <div id="accordion-coord-karim" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Produce, maintain and update discipline BIM models according to project requirements.</li>
-                    <li>Follow company standards, BEP, LOD requirements, naming conventions and approved templates.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
                     <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
-                    <li>Prepare views, drawings and schedules in line with project documentation standards.</li>
                     <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
                     <li>Ensure the accuracy and completeness of model information for each project stage.</li>
                     <li>Support Senior BIM Coordinators and BIM Leads with model updates and information checks.</li>
@@ -747,11 +774,11 @@
               <div id="accordion-dev-amira" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Develop and maintain automation tools (Dynamo scripts, Python tools, APIs, custom add-ins).</li>
+                    <li>Develop and maintain automation tools (Dynamo scripts, Python & C# tools, APIs, custom add-ins).</li>
                     <li>Improve and standardize BIM workflows to reduce manual work and errors.</li>
                     <li>Troubleshoot and support BIM team members in the use of scripts and custom digital tools.</li>
                     <li>Document digital workflows and maintain version control for scripts and plugins.</li>
-                    <li>Support integration of BIM data with other systems (dashboards, databases or CDE automation).</li>
+                    <li>Support integration of BIM data with other systems (dashboards, databases, or CDE automation).</li>
                   </ul>
                 </div>
               </div>
@@ -770,14 +797,17 @@
           </div>
           <div class="section-tag">Design Consultancy – BIM Unit</div>
         </div>
-        <div class="team-grid">
 
-          <!-- BIM Manager – Mimar Plus (vacant) -->
+        <!-- BIM Manager – Mimar Plus (top center) -->
+        <div class="manager-wrapper">
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">MP</div>
+              <div class="card-avatar">
+                <!-- no image: initial from name -->
+                T
+              </div>
               <div class="card-meta">
-                <div class="card-name">[To be assigned]</div>
+                <div class="card-name">To be assigned</div>
                 <div class="card-role">BIM Manager – Mimar Plus</div>
               </div>
             </div>
@@ -803,6 +833,9 @@
               </div>
             </div>
           </article>
+        </div>
+
+        <div class="team-grid">
 
           <!-- BIM Coordinators – Mimar Plus -->
           <article class="card">
@@ -826,11 +859,15 @@
               <div id="accordion-plus-alaa" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Develop and maintain BIM models for Mimar Plus projects in line with project scope.</li>
-                    <li>Follow BEP, LOD and naming conventions established by the BIM standards.</li>
-                    <li>Prepare drawings, views and schedules for documentation and coordination.</li>
-                    <li>Upload and manage models and related documents in the CDE.</li>
-                    <li>Support the future BIM Manager – Mimar Plus in coordinating design information.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
+                    <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
+                    <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
+                    <li>Ensure the accuracy and completeness of model information for each project stage.</li>
+                    <li>Support BIM Manager with model updates and information checks.</li>
+                    <li>Create and maintain complex families and parametric components that follow company standards.</li>
+                    <li>Troubleshoot difficult modeling issues and optimize models for performance and usability.</li>
+                    <li>Help maintain specialized content libraries and ensure consistency in their use.</li>
                   </ul>
                 </div>
               </div>
@@ -858,11 +895,15 @@
               <div id="accordion-plus-lobna" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Develop and maintain BIM models for Mimar Plus projects in line with project scope.</li>
-                    <li>Follow BEP, LOD and naming conventions established by the BIM standards.</li>
-                    <li>Prepare drawings, views and schedules for documentation and coordination.</li>
-                    <li>Upload and manage models and related documents in the CDE.</li>
-                    <li>Support the future BIM Manager – Mimar Plus in coordinating design information.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
+                    <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
+                    <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
+                    <li>Ensure the accuracy and completeness of model information for each project stage.</li>
+                    <li>Support BIM Manager with model updates and information checks.</li>
+                    <li>Create and maintain complex families and parametric components that follow company standards.</li>
+                    <li>Troubleshoot difficult modeling issues and optimize models for performance and usability.</li>
+                    <li>Help maintain specialized content libraries and ensure consistency in their use.</li>
                   </ul>
                 </div>
               </div>
@@ -890,11 +931,15 @@
               <div id="accordion-plus-sherif" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Develop and maintain BIM models for Mimar Plus projects in line with project scope.</li>
-                    <li>Follow BEP, LOD and naming conventions established by the BIM standards.</li>
-                    <li>Prepare drawings, views and schedules for documentation and coordination.</li>
-                    <li>Upload and manage models and related documents in the CDE.</li>
-                    <li>Support the future BIM Manager – Mimar Plus in coordinating design information.</li>
+                    <li>Develop, maintain, and update discipline BIM models according to project BIM requirements.</li>
+                    <li>Follow company standards, BEP, LOD requirements, naming conventions, and approved templates.</li>
+                    <li>Participate in clash detection workflows and coordinate with other disciplines to resolve issues.</li>
+                    <li>Upload models and related outputs to the CDE, respecting the defined information workflow.</li>
+                    <li>Ensure the accuracy and completeness of model information for each project stage.</li>
+                    <li>Support BIM Manager with model updates and information checks.</li>
+                    <li>Create and maintain complex families and parametric components that follow company standards.</li>
+                    <li>Troubleshoot difficult modeling issues and optimize models for performance and usability.</li>
+                    <li>Help maintain specialized content libraries and ensure consistency in their use.</li>
                   </ul>
                 </div>
               </div>
