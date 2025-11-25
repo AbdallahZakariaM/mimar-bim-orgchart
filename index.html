@@ -107,7 +107,7 @@
     }
 
     .avatar:hover {
-      transform: scale(1.4);
+      transform: scale(2.5);
       box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
     }
 
@@ -197,7 +197,7 @@
     }
 
     .section-logo:hover {
-      transform: scale(1.1);
+      transform: scale(1.2);
       box-shadow: 0 0 16px rgba(59, 130, 246, 0.6);
     }
 
@@ -239,7 +239,7 @@
     }
 
     .card-avatar:hover {
-      transform: scale(1.4);
+      transform: scale(2.5);
       box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
     }
 
@@ -322,14 +322,15 @@
       border: 1px solid rgba(31, 41, 55, 0.9);
       background: rgba(15, 23, 42, 0.95);
       max-height: 0;
-      overflow: hidden;
+      overflow: hidden; /* closed state: fully hidden */
       transition: max-height 0.25s ease-out, opacity 0.25s ease-out;
       opacity: 0;
     }
 
     .accordion.open {
-      max-height: 360px;
+      max-height: 360px;   /* limit height */
       opacity: 1;
+      overflow-y: auto;    /* vertical scrollbar when needed */
     }
 
     .accordion-inner {
@@ -430,7 +431,8 @@
           <article class="card">
             <div class="card-header">
               <div class="card-avatar">
-                <!-- No img here: script will use "T" from "To be assigned" -->
+                <!-- default image for no photo -->
+                <img src="img/no-pic.png" alt="No photo">
               </div>
               <div class="card-meta">
                 <div class="card-name">To be assigned</div>
@@ -815,7 +817,8 @@
           <article class="card">
             <div class="card-header">
               <div class="card-avatar">
-                <!-- No img here: script will use "T" from "To be assigned" -->
+                <!-- default image for no photo -->
+                <img src="img/no-pic.png" alt="No photo">
               </div>
               <div class="card-meta">
                 <div class="card-name">To be assigned</div>
@@ -993,9 +996,7 @@
       });
     });
 
-    // Automatic initials for avatars with no image:
-    // - Looks for .card-avatar or .avatar with NO <img>
-    // - Takes first character of .card-name / .person-name and uses it as placeholder
+    // Optional: initials fallback remains if you ever leave an avatar without an <img>
     (function () {
       var containers = document.querySelectorAll('.card, .top-role');
       containers.forEach(function (card) {
