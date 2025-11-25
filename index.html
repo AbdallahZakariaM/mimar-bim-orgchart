@@ -27,7 +27,7 @@
       background: radial-gradient(circle at top, #020617 0, #020617 40%, #000 100%);
       color: var(--text-main);
       padding: 24px;
-      font-size: 18px; /* overall bigger */
+      font-size: 18px; /* overall bigger text */
     }
 
     .page {
@@ -107,7 +107,7 @@
     }
 
     .avatar:hover {
-      transform: scale(1.15);
+      transform: scale(1.4);
       box-shadow: 0 0 20px rgba(249, 115, 22, 0.6);
     }
 
@@ -143,15 +143,21 @@
       }
     }
 
+    /* A&E section: purple/green dark tone */
     .section {
       border-radius: 20px;
       border: 1px solid rgba(148, 163, 184, 0.3);
       padding: 16px;
-      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.18), #020617 70%);
+      background:
+        radial-gradient(circle at top left, rgba(168, 85, 247, 0.3), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(34, 197, 94, 0.22), #020617 70%);
     }
 
+    /* Mimar Plus section: blue/cyan dark tone */
     .section--plus {
-      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), #020617 70%);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.3), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.26), #020617 70%);
     }
 
     .section-header {
@@ -184,9 +190,15 @@
     }
 
     .section-logo {
-      width: 64px;  /* bigger than members */
-      height: 64px;
+      width: 72px;  /* bigger than member avatars */
+      height: 72px;
       object-fit: contain;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .section-logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 16px rgba(59, 130, 246, 0.6);
     }
 
     .team-grid {
@@ -227,7 +239,7 @@
     }
 
     .card-avatar:hover {
-      transform: scale(1.15);
+      transform: scale(1.4);
       box-shadow: 0 0 16px rgba(56, 189, 248, 0.6);
     }
 
@@ -247,19 +259,19 @@
     }
 
     .card-name {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
     }
 
     .card-role {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--text-muted);
     }
 
     .card-body {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--text-muted);
     }
 
@@ -267,7 +279,7 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.5);
       padding: 3px 10px;
@@ -291,7 +303,7 @@
       border: 1px solid rgba(148, 163, 184, 0.6);
       background: transparent;
       color: var(--text-main);
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       padding: 5px 10px;
       cursor: pointer;
       display: inline-flex;
@@ -322,7 +334,7 @@
 
     .accordion-inner {
       padding: 8px 10px;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       line-height: 1.5;
       color: var(--text-main);
     }
@@ -336,13 +348,14 @@
       margin-bottom: 3px;
     }
 
+    /* Manager wrapper: top center card inside each company */
     .manager-wrapper {
       margin-bottom: 14px;
       text-align: center;
     }
 
     .manager-wrapper .card {
-      max-width: 320px;
+      max-width: 340px;
       margin: 0 auto;
     }
 
@@ -369,7 +382,7 @@
     <section class="top-role">
       <div class="top-role-header">
         <div class="avatar">
-          <!-- Replace with your actual file name -->
+          <!-- If you remove this img, the script will show "A" from the name -->
           <img src="img/abdallah-zakaria.jpg" alt="BIM Department Manager photo">
         </div>
         <div>
@@ -417,8 +430,7 @@
           <article class="card">
             <div class="card-header">
               <div class="card-avatar">
-                <!-- no image: initial from name -->
-                T
+                <!-- No img here: script will use "T" from "To be assigned" -->
               </div>
               <div class="card-meta">
                 <div class="card-name">To be assigned</div>
@@ -774,7 +786,7 @@
               <div id="accordion-dev-amira" class="accordion">
                 <div class="accordion-inner">
                   <ul>
-                    <li>Develop and maintain automation tools (Dynamo scripts, Python & C# tools, APIs, custom add-ins).</li>
+                    <li>Develop and maintain automation tools (Dynamo scripts, Python &amp; C# tools, APIs, custom add-ins).</li>
                     <li>Improve and standardize BIM workflows to reduce manual work and errors.</li>
                     <li>Troubleshoot and support BIM team members in the use of scripts and custom digital tools.</li>
                     <li>Document digital workflows and maintain version control for scripts and plugins.</li>
@@ -803,8 +815,7 @@
           <article class="card">
             <div class="card-header">
               <div class="card-avatar">
-                <!-- no image: initial from name -->
-                T
+                <!-- No img here: script will use "T" from "To be assigned" -->
               </div>
               <div class="card-meta">
                 <div class="card-name">To be assigned</div>
@@ -981,6 +992,30 @@
         }
       });
     });
+
+    // Automatic initials for avatars with no image:
+    // - Looks for .card-avatar or .avatar with NO <img>
+    // - Takes first character of .card-name / .person-name and uses it as placeholder
+    (function () {
+      var containers = document.querySelectorAll('.card, .top-role');
+      containers.forEach(function (card) {
+        var avatar = card.querySelector('.card-avatar, .avatar');
+        if (!avatar) return;
+
+        var hasImg = avatar.querySelector('img');
+        if (hasImg) return;
+
+        var nameEl = card.querySelector('.card-name, .person-name');
+        if (!nameEl) return;
+
+        var nameText = nameEl.textContent || '';
+        nameText = nameText.trim();
+        if (!nameText) return;
+
+        var initial = nameText.charAt(0).toUpperCase();
+        avatar.textContent = initial;
+      });
+    })();
   </script>
 </body>
 </html>
