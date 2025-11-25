@@ -101,6 +101,7 @@
       font-weight: 700;
       font-size: 1.1rem;
       color: #0b1120;
+      overflow: hidden;
     }
 
     .role-title {
@@ -151,6 +152,13 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .section-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .section-title {
@@ -166,6 +174,12 @@
       border-radius: 999px;
       border: 1px solid rgba(148, 163, 184, 0.6);
       color: var(--text-muted);
+    }
+
+    .section-logo {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
     }
 
     .team-grid {
@@ -200,6 +214,16 @@
       justify-content: center;
       font-size: 0.9rem;
       font-weight: 700;
+      overflow: hidden;
+    }
+
+    .card-avatar img,
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      object-fit: cover;
+      display: block;
     }
 
     .card-meta {
@@ -320,10 +344,13 @@
     <!-- Top Role: BIM Department Manager -->
     <section class="top-role">
       <div class="top-role-header">
-        <div class="avatar">BM</div>
+        <div class="avatar">
+          <!-- Replace with your actual file name -->
+          <img src="img/abdallah-zakaria.jpg" alt="BIM Department Manager photo">
+        </div>
         <div>
           <div class="role-title">BIM Department Manager</div>
-          <div class="person-name">[Your Name Here]</div>
+          <div class="person-name">Abdallah Zakaria</div>
         </div>
       </div>
       <div class="role-description">
@@ -354,7 +381,10 @@
       <!-- Mimar Architecture & Engineering -->
       <section class="section">
         <div class="section-header">
-          <div class="section-title">Mimar Architecture &amp; Engineering</div>
+          <div class="section-left">
+            <img src="img/logo-mimar-ae.png" alt="Mimar Architecture & Engineering logo" class="section-logo">
+            <div class="section-title">Mimar Architecture &amp; Engineering</div>
+          </div>
           <div class="section-tag">Design Consultancy – BIM Unit</div>
         </div>
         <div class="team-grid">
@@ -395,7 +425,9 @@
           <!-- BIM Leads -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">EH</div>
+              <div class="card-avatar">
+                <img src="img/eman-hussien.jpg" alt="eman.hussien">
+              </div>
               <div class="card-meta">
                 <div class="card-name">eman.hussien</div>
                 <div class="card-role">BIM Lead</div>
@@ -426,7 +458,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">ZH</div>
+              <div class="card-avatar">
+                <img src="img/zeinab-hamdy.jpg" alt="zeinab.hamdy">
+              </div>
               <div class="card-meta">
                 <div class="card-name">zeinab.hamdy</div>
                 <div class="card-role">BIM Lead</div>
@@ -458,7 +492,9 @@
           <!-- Senior BIM Coordinators -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">DM</div>
+              <div class="card-avatar">
+                <img src="img/doha-mansour.jpg" alt="doha.mansour">
+              </div>
               <div class="card-meta">
                 <div class="card-name">doha.mansour</div>
                 <div class="card-role">Senior BIM Coordinator</div>
@@ -490,7 +526,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">MA</div>
+              <div class="card-avatar">
+                <img src="img/mahmoud-abdelaal.jpg" alt="mahmoud.abdelaal">
+              </div>
               <div class="card-meta">
                 <div class="card-name">mahmoud.abdelaal</div>
                 <div class="card-role">Senior BIM Coordinator</div>
@@ -523,7 +561,9 @@
           <!-- BIM Coordinators -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">AE</div>
+              <div class="card-avatar">
+                <img src="img/abdelraof-essam.jpg" alt="abdelraof.essam">
+              </div>
               <div class="card-meta">
                 <div class="card-name">abdelraof.essam</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -555,7 +595,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">HK</div>
+              <div class="card-avatar">
+                <img src="img/hoda-khaled.jpg" alt="hoda.khaled">
+              </div>
               <div class="card-meta">
                 <div class="card-name">hoda.khaled</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -587,7 +629,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">KH</div>
+              <div class="card-avatar">
+                <img src="img/karim-hussein.jpg" alt="karim.hussein">
+              </div>
               <div class="card-meta">
                 <div class="card-name">karim.hussein</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -620,7 +664,9 @@
           <!-- BIM Specialists -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">RN</div>
+              <div class="card-avatar">
+                <img src="img/radwa-nabil.jpg" alt="radwa.nabil">
+              </div>
               <div class="card-meta">
                 <div class="card-name">radwa.nabil</div>
                 <div class="card-role">BIM Specialist</div>
@@ -650,7 +696,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">SH</div>
+              <div class="card-avatar">
+                <img src="img/salma-hamed.jpg" alt="salma.hamed">
+              </div>
               <div class="card-meta">
                 <div class="card-name">salma.hamed</div>
                 <div class="card-role">BIM Specialist / Developer</div>
@@ -680,7 +728,9 @@
           <!-- BIM Software Developer -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">AK</div>
+              <div class="card-avatar">
+                <img src="img/amira-khaled.jpg" alt="amira.khaled">
+              </div>
               <div class="card-meta">
                 <div class="card-name">amira.khaled</div>
                 <div class="card-role">BIM Software Developer</div>
@@ -714,7 +764,10 @@
       <!-- Mimar Plus -->
       <section class="section section--plus">
         <div class="section-header">
-          <div class="section-title">Mimar Plus</div>
+          <div class="section-left">
+            <img src="img/logo-mimar-plus.png" alt="Mimar Plus logo" class="section-logo">
+            <div class="section-title">Mimar Plus</div>
+          </div>
           <div class="section-tag">Design Consultancy – BIM Unit</div>
         </div>
         <div class="team-grid">
@@ -754,7 +807,9 @@
           <!-- BIM Coordinators – Mimar Plus -->
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">AA</div>
+              <div class="card-avatar">
+                <img src="img/alaa-ali.jpg" alt="alaa.ali">
+              </div>
               <div class="card-meta">
                 <div class="card-name">alaa.ali</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -784,7 +839,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">LM</div>
+              <div class="card-avatar">
+                <img src="img/lobna-mohamed.jpg" alt="lobna.mohamed">
+              </div>
               <div class="card-meta">
                 <div class="card-name">lobna.mohamed</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -814,7 +871,9 @@
 
           <article class="card">
             <div class="card-header">
-              <div class="card-avatar">SK</div>
+              <div class="card-avatar">
+                <img src="img/sherif-khaled.jpg" alt="sherif.khaled">
+              </div>
               <div class="card-meta">
                 <div class="card-name">sherif.khaled</div>
                 <div class="card-role">BIM Coordinator</div>
@@ -847,7 +906,7 @@
     </div>
 
     <footer>
-      BIM Department Organizational Structure – Mimar Group &copy; <!-- You can add year here -->
+      BIM Department Organizational Structure – Mimar Group
     </footer>
   </div>
 
@@ -862,7 +921,7 @@
         if (!acc) return;
         var isOpen = acc.classList.contains('open');
 
-        // Close all others in same card
+        // Close others in same card/top-role
         var card = btn.closest('.card, .top-role');
         if (card) {
           card.querySelectorAll('.accordion').forEach(function (other) {
